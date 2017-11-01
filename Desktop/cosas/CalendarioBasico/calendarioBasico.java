@@ -28,5 +28,23 @@ public class calendarioBasico
         mes = 01;
         anno = 01;
         return dia + "-" + mes + "-" + anno;
+    }
+    
+    /**
+     * Esto es un método donde podemos meter a mano la fecha de nuesto calendario.
+     * Tal fecha debe ir comprendida entre los años 2000 al 2099.
+     */    
+    public void fijarFecha(int dd, int mm, int aaaa)
+    {   if(aaaa <= 2000)
+        {
+            System.out.println("Inserte un año entre 2000-2099");
+        }
+        if (aaaa > 2099)
+        {
+            System.out.println("Inserte un año entre 2000-2099");
+        }
+        dia = dd;
+        mes= mm;
+        anno= aaaa;
     }    
 }
