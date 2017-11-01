@@ -46,5 +46,28 @@ public class calendarioBasico
         dia = dd;
         mes= mm;
         anno= aaaa;
+    }
+    
+    /**
+     * Esto es un método que nos va a permitir avanzar dia a dia.
+     * Después del 30 pasará al siguiente mes y en el mes 12, 
+     * que es el último mes año pasará al siguiente año.
+     */     
+    public void anvanzarFecha()
+    {
+     if(dia < 31)
+     {
+        dia = dia +1;
+     }
+     if(dia == 31)
+     {
+         dia =1;
+         mes = mes +1;
+     }
+     if(mes == 13)
+     {
+        mes = 1;
+        anno = anno +1;
+     }
     }    
 }
