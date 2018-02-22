@@ -44,8 +44,9 @@ public class BallDemo
             int green = aleatorio.nextInt(256);
             
             Color color = new Color(red, blue, green);
+            int posicionX = aleatorio.nextInt(300);
             
-            BouncingBall bola = new BouncingBall(30 + (20*i), 30, tamannoBolas, color, ground, myCanvas);
+            BouncingBall bola = new BouncingBall(posicionX, 30, tamannoBolas, color, ground, myCanvas);
             bola.draw();
             bolas[i] = bola;
         }
