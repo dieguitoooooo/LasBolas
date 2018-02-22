@@ -39,8 +39,13 @@ public class BallDemo
         Random aleatorio = new Random();
         for(int i=0; i<nBolas; i++){
             int tamannoBolas = aleatorio.nextInt(20) + 5;
+            int blue = aleatorio.nextInt(256);
+            int red = aleatorio.nextInt(256);
+            int green = aleatorio.nextInt(256);
             
-            BouncingBall bola = new BouncingBall(30 + (20*i), 30, tamannoBolas, Color.RED, ground, myCanvas);
+            Color color = new Color(red, blue, green);
+            
+            BouncingBall bola = new BouncingBall(30 + (20*i), 30, tamannoBolas, color, ground, myCanvas);
             bola.draw();
             bolas[i] = bola;
         }
